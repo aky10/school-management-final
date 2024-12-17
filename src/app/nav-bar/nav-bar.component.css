@@ -1,0 +1,44 @@
+.showing{
+    text-decoration: none;
+    color: black;
+}
+.adding{
+    text-decoration: none;
+    color: black;
+}
+.nav-bar{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    box-shadow: 20px;
+    background: linear-gradient(white 40%,rgba(255, 132, 0, 0.367) );
+    /* background-color: blueviolet; */
+    
+}
+.prop-list{
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}.prop-list li{
+    font-size: 23px;
+    margin:10px; 
+}
+.brand{
+    box-shadow: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    
+}
+.brand a{
+    font-size: 23px;
+    
+}

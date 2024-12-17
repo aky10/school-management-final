@@ -1,0 +1,71 @@
+.student-table{
+    justify-content: center;
+    text-align: center;
+}
+/* .student-row{
+    padding: 5px;
+    margin: 5px;
+} */
+.update-btn{
+
+    color: white;
+    margin: auto 23px;
+    margin-left: 0px;
+    background-color: #008CBA;
+    padding: 0px 12px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.del-btn{
+    color: white;
+    background-color: red;
+    margin: auto 23px;
+    margin-left: 0px;
+    padding: 0px 12px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.update-btn:hover{
+    color: #008CBA;
+    background-color: white;
+    transform: scale(1.2);
+}
+.del-btn:hover{
+    color: red;
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* .list{
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 203px;
+}
+.list td{
+    border: 2px solid black;
+    border-radius: 23px;
+    text-align: center;
+    padding:10px 30px;
+}
+
+.list th , tr{
+    padding:30px;
+    border: 2px solid black;
+    border-radius: 23px;
+
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* button {
+    margin-right: 5px;
+  } */
+  

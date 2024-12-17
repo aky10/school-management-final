@@ -1,0 +1,34 @@
+<h2>Teachers List</h2>
+
+<!-- <table class="list"> -->
+<table  border="1" cellspacing="0" cellpadding="10">
+    <thead>
+
+        <!-- <tr class="teacher-row"> -->
+        <tr >
+            <th>Teacher Id</th>
+            <th>Teacher Name</th>
+            <th>City</th>
+            <th>Teaching Grade</th>
+            <th>Gender</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let teacher of teachers">
+            <td>{{teacher.id}}</td>
+            <td>{{teacher.name}}</td>
+            <td>{{teacher.address}}</td>
+            <td>{{teacher.teachingGrade}}</td>
+            <td>{{teacher.gender}}</td>
+            <!-- <td>hyutyhy</td> -->
+            <td>
+                <button (click)="updateTeacher(teacher.id)" mat-raised-button
+                class="update-btn">Update</button>
+                <button (click)="deleteTeacher(teacher.id)" mat-raised-button
+                class="del-btn">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>

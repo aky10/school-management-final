@@ -1,0 +1,90 @@
+<h2 style="display: flex; place-content: center; align-items: center;">Create a Student</h2>
+
+<div class="container">
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <!-- Full Name -->
+    <label for="fullName">Full Name:</label>
+    <input
+      matInput
+      id="fullName"
+      formControlName="fullName"
+      type="text"
+      [(ngModel)]="name"
+      required
+    />
+    <mat-hint *ngIf="studentForm.get('fullName')?.invalid && studentForm.get('fullName')?.touched" class="error">
+      Name should contain only alphabetic characters.
+    </mat-hint>
+
+    <!-- Teaching Grade -->
+    <label for="teachingGrade">Teaching Grade:</label>
+    <input
+      matInput
+      id="teachingGrade"
+      formControlName="teachingGrade"
+      type="number"
+      required
+      [(ngModel)]="grade"
+    />
+    <mat-hint *ngIf="studentForm.get('teachingGrade')?.invalid && studentForm.get('teachingGrade')?.touched" class="error">
+      Grade should be between 1 and 12.
+    </mat-hint>
+
+    <!-- State -->
+    <label for="state">State:</label>
+    <select id="state" formControlName="state" [(ngModel)]="state" required>
+      <option *ngFor="let state of states" [ngValue]="state">{{ state.name }}</option>
+    </select>
+
+    <!-- City -->
+    <label for="city">City:</label>
+    <select id="city" formControlName="city" [(ngModel)]="city" required>
+      <option *ngFor="let city of getCities()" [value]="city">{{ city }}</option>
+    </select>
+
+    <!-- Date of Birth -->
+    <label for="dob">Date of Birth:</label>
+    <input
+      matInput
+      id="dob"
+      formControlName="dob"
+      type="date"
+      [(ngModel)]="birthDate"
+      required
+    />
+    <mat-hint *ngIf="studentForm.get('dob')?.invalid && studentForm.get('dob')?.touched" class="error">
+      Date of Birth is required.
+    </mat-hint>
+
+    <!-- Father's Name -->
+    <label for="fatherName">Father's Name:</label>
+    <input
+      matInput
+      id="fatherName"
+      formControlName="fatherName"
+      type="text"
+      [(ngModel)]="fatherName"
+      required
+    />
+    <mat-hint *ngIf="studentForm.get('fatherName')?.invalid && studentForm.get('fatherName')?.touched" class="error">
+      Name should contain only alphabetic characters.
+    </mat-hint>
+
+    <!-- Father's Mobile Number -->
+    <label for="contactNo">Father's Mobile Number:</label>
+    <input
+      matInput
+      id="contactNo"
+      formControlName="contactNo"
+      type="text"
+      [(ngModel)]="contactNo"
+      required
+    />
+    <mat-hint *ngIf="studentForm.get('contactNo')?.invalid && studentForm.get('contactNo')?.touched" class="error">
+      Phone number must be 10 digits long and start with 6-9.
+    </mat-hint>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="studentForm.invalid">Submit</button>
+  </form>
+</div>

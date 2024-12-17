@@ -1,0 +1,28 @@
+.text{
+    z-index: 2222;
+    position: absolute;
+    top: 400px;
+    left: 90px;
+    color: white;
+    font-size: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.text p{
+    font-weight: 900;
+    text-align: center;
+
+}
+.text p:hover{
+    text-decoration: underline;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

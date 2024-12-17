@@ -1,0 +1,70 @@
+<!-- <div class="container">
+
+    
+    <form (ngSubmit)="onSubmit()" class="example-form">
+        <h1 >Create a Teacher</h1>
+        <mat-form-field class="example-full-width">
+            <mat-label>Full Name</mat-label>
+            <input (change)="onTeacherNameChange()" matInput [(ngModel)]="teacher.name" name="name" placeholder="Enter Your Name" required="true">
+            <mat-hint class="hint hide" id="tName">Name should be only aphabetic characters</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <input required="true" matInput [(ngModel)]="teacher.address" name="city" placeholder="Enter Your City">
+            <mat-hint class="hint hide" id="city"></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Teaching Grade</mat-label>
+            <input required="true" (change)="onTeachingGradeChange()" matInput [(ngModel)]="teacher.teachingGrade" name="teachingGrade" placeholder="Enter Your Teaching Grade">
+            <mat-hint class="hint hide" id="grade"> grade should be between 1-12</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Gender</mat-label>
+            <mat-select  required="true" matInput [(ngModel)]="selectedGender" name="grade" placeholder="Enter Your Gender">
+                <mat-option *ngFor="let gender of genders" [value]="gender">{{gender}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Submit</button>
+    </form>
+
+</div> -->
+
+<!-- src/app/create-teacher/create-teacher.component.html -->
+<h2 style="display: flex; place-content: center; align-items: center;">Create a Teacher</h2>
+
+<div class="container">
+<form [formGroup]="teacherForm" (ngSubmit)="onSubmit()">
+  <!-- Full Name -->
+  <label  for="fullName">Full Name:</label>
+  <input (change)="onTeacherNameChange()" matInput [(ngModel)]="teacher.name" id="fullName" formControlName="fullName" type="text" required="true" />
+  <mat-hint class="hint hide" id="tName">Name should be only aphabetic characters</mat-hint>
+
+  <!-- City -->
+  <label for="city">City:</label>
+  <input matInput [(ngModel)]="teacher.address" id="city" formControlName="city" type="text" required />
+  <mat-hint class="hint hide" id="city"></mat-hint>
+
+  <!-- Teaching Grade -->
+  <label for="teachingGrade">Teaching Grade:</label>
+  <input (change)="onTeachingGradeChange()" matInput [(ngModel)]="teacher.teachingGrade" id="teachingGrade" formControlName="teachingGrade" required />
+  <mat-hint class="hint hide" id="grade"> grade should be between 1-12</mat-hint>
+
+  <!-- Gender -->
+  <label for="gender">Gender:</label>
+  <select id="gender" formControlName="gender" [(ngModel)]="selectedGender" required>
+    <option value="" disabled>Select gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <!-- Submit Button -->
+  <button type="submit" >Submit</button>
+</form>
+</div>
+
+
+
+  
+  
+  

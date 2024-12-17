@@ -1,0 +1,56 @@
+/* 
+
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example-full-width {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+    */
+
+    .hide{
+      display: none;
+      }
+      .hint{
+        color: red;
+        } 
+    
+.container{
+  display: flex;
+  justify-content: center;
+  width: 30em;
+}
+
+/* src/app/create-teacher/create-teacher.component.css */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input, select {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+}
